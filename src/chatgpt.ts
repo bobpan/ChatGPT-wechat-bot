@@ -4,7 +4,7 @@ import config from './config';
 import { retryRequest } from './utils';
 
 const conversationMap = new Map();
-const chatGPT = new ChatGPTAPI({ sessionToken: config.chatGPTSessionToken });
+const chatGPT = new ChatGPTAPI({ sessionToken: process.env.CHATGPT_SESSION_TOKEN });
 
 function resetConversation(contactId: string) {
   if (conversationMap.has(contactId)) {
