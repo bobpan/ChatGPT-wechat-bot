@@ -33,6 +33,8 @@ jobs:
 
     - name: 启动
       run: npm run dev
+      env: 
+        CHATGPT_SESSION_TOKEN: ${{ secrets.CHATGPT_SESSION_TOKEN }}
 
       #第二种方式
       #npm run build
